@@ -1,0 +1,255 @@
+.home-container {
+  padding: 2.5rem 1.5rem 4rem 1.5rem;
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: 'Macan', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  min-height: calc(100vh - 70px);
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.home-container h1 {
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.2;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.home-container h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #1DBF73;
+  border-radius: 2px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* More specific selector for search icon */
+.home-container .search-wrapper .search-icon,
+.search-wrapper .search-icon {
+  position: absolute !important;
+  left: 1rem !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  color: #74767E !important;
+  font-size: 1.1rem !important;
+  z-index: 10 !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.search-bar {
+  padding: 1rem 1.5rem 1rem 3rem;
+  width: 100%;
+  border: 2px solid #E4E5E7;
+  border-radius: 30px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.search-bar:focus {
+  border-color: #1DBF73;
+  box-shadow: 0 0 0 4px rgba(29, 191, 115, 0.1);
+}
+
+.search-bar::placeholder {
+  color: #74767E;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 3rem 2rem;
+  padding: 1rem;
+  margin-top: 40px;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+/* Reset unnecessary styles */
+.home-container .card-grid {
+  padding-top: 0;
+}
+
+/* Adjust these selectors for profile cards in the grid */
+.user-container .card-grid {
+  padding-top: 50px;
+  margin-bottom: 30px;
+}
+
+/* Fix for the user container to ensure proper spacing */
+.user-container {
+  padding-top: 2rem !important;
+  padding-bottom: 3rem !important;
+}
+
+/* Add a subtle hover effect to cards */
+.card-grid > * {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-grid > *:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Loading State */
+.loading-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  color: #74767E;
+  font-size: 1.1rem;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.loading-state::after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  border: 3px solid #E4E5E7;
+  border-top-color: #1DBF73;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* No Results State */
+.no-results {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #74767E;
+  font-size: 1.1rem;
+  background: #F7F7F7;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 400px;
+}
+
+/* Search Suggestions */
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 600px;
+  background: var(--background-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  margin-top: 0.5rem;
+  z-index: 1000;
+  display: none;
+}
+
+.search-suggestions.active {
+  display: block;
+}
+
+.suggestion-item {
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.suggestion-item:hover {
+  background-color: var(--background-light);
+}
+
+/* Filter Section */
+.filter-section {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+
+.filter-button {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #E4E5E7;
+  border-radius: 25px;
+  background-color: var(--background-white);
+  color: #404145;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-button:hover {
+  border-color: #1DBF73;
+  color: #1DBF73;
+  background-color: #E8F7F0;
+}
+
+.filter-button.active {
+  background-color: #1DBF73;
+  color: white;
+  border-color: #1DBF73;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 1.5rem 1rem 3rem 1rem;
+  }
+
+  .home-container h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .search-bar {
+    padding: 0.875rem 1.25rem 0.875rem 2.75rem;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 4rem 1.5rem;
+  }
+
+  .filter-section {
+    gap: 0.5rem;
+  }
+
+  .filter-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+

@@ -1,0 +1,107 @@
+/* Global CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Global variables */
+:root {
+  --primary-color: #1DBF73;
+  --primary-hover: #19A463;
+  --primary-dark: #0ca563;
+  --secondary-color: #2B3A55;
+  --accent-color: #57C5B6;
+  --text-primary: #2c3e50;
+  --text-secondary: #74767E;
+  --text-light: #ecf0f1;
+  --background-light: #F7F7F7;
+  --background-white: #FFFFFF;
+  --light-color: #F8F9FA;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12);
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
+  --hover-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+  --gradient-bg: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+}
+
+/* Fix for layout issues */
+#root {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* Layout component fixes */
+.main-layout {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Common page structure */
+.page-content > div {
+  padding: 20px;
+  width: 100%;
+}
+
+/* Search icon fix */
+.search-wrapper .search-icon {
+  position: absolute !important;
+  left: 1rem !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 99 !important;
+}
+
+/* Fix for Home page scrolling */
+.home-page-container {
+  height: auto;
+  width: 100%;
+  overflow-y: auto;
+}
+
+/* Common button styling */
+.btn {
+  padding: 8px 16px;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+  background-color: rgba(29, 191, 115, 0.1);
+}

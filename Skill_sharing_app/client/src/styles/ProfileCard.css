@@ -1,0 +1,123 @@
+.profile-card {
+  width: 280px;
+  padding-top: 90px; 
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin: 60px 1rem 1rem 1rem;
+  background: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Macan', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  position: relative;
+}
+
+.profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+.profile-img-container {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: -60px; /* Position exactly half above the card */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  border-radius: 50%;
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-img {
+  width: 120px !important;
+  height: 120px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Add extra space at the top of the card content for the image */
+.profile-name {
+  margin-top: 0 !important; /* Removed extra margin since we have padding */
+  text-align: center !important;
+}
+
+/* Target only profile cards that are direct children of card-grid (in User.jsx) */
+.card-grid > .profile-card .profile-name,
+.card-grid > .profile-card h3.profile-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 1rem 0 0.5rem;
+  color: #0E0E0E;
+  text-align: center !important;
+}
+
+.card-grid > .profile-card .profile-bio {
+  font-size: 0.95rem;
+  color: #74767E;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.card-grid > .profile-card .profile-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.card-grid > .profile-card .skill-tag {
+  background-color: #F7F7F7;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #404145;
+  font-weight: 500;
+}
+
+.card-grid > .profile-card .profile-rating {
+  font-size: 1.1rem;
+  color: #FFB800;
+  margin: 0.5rem 0;
+  text-align: center !important;
+  display: flex;
+  justify-content: center !important;
+  width: 100%;
+}
+
+/* Additional selector to ensure rating is centered */
+.card-grid .profile-card div.profile-rating {
+  text-align: center !important;
+  display: flex;
+  justify-content: center !important;
+  width: 100%;
+}
+
+.card-grid > .profile-card .profile-socials {
+  display: flex;
+  justify-content: center !important;
+  gap: 12px;
+  margin: 0.8rem 0;
+}
+
+.card-grid > .profile-card .social-icon {
+  font-size: 1.3rem;
+  color: #74767E;
+  transition: color 0.2s ease;
+}
+
+.card-grid > .profile-card .social-icon:hover {
+  color: #1DBF73;
+}
