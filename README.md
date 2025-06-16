@@ -111,5 +111,5 @@ skill_sharing_app/
 This project is licensed under the ISC License.
 
 ## Contact
-Your Name - [Your Email]
-Project Link: [https://github.com/yourusername/skill_sharing_app](https://github.com/yourusername/skill_sharing_app) 
+Utsav Gavli - [utsavgavli463@gmail]
+Project Link: [https://github.com/utsav145/WBT_Mini_project](https://github.com/utsav145/WBT_Mini_project)
